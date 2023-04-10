@@ -33,11 +33,14 @@ class Employee {
 
 public class empDetails {
     public static void main(String args[]) {
-        int search;
+        int n,search;
         int flag = 0;
         Scanner sn = new Scanner(System.in);
+        
+        System.out.print("Employee count : ");
+        n=sn.nextInt();
 
-        Employee arr_obj[] = new Employee[3];
+        Employee arr_obj[] = new Employee[n];
 
         for (int i = 0; i < arr_obj.length; i++) {
             System.out.println("\nEmployee " + (i + 1) + "\n_________________");
