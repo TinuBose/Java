@@ -25,13 +25,11 @@ class setArr {
         search = s.nextInt();
         for (i = 0; i < n; i++) {
             if (arr[i] == search) {
+                System.out.println(search + " is found at location " + i);
                 flag = 1;
-                break;
             }
         }
         if (flag == 1) {
-            System.out.println(search + " is found at location " + i);
-        } else {
             System.out.println("element not found...");
         }
     }
