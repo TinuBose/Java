@@ -1,69 +1,58 @@
 import java.util.Scanner;
 
-class Employee {
-    Scanner sn = new Scanner(System.in);
-    int e_num;
-    String e_name;
-    int salary;
+class shape {
+    int l, b, r, a;
+    Scanner s = new Scanner(System.in);
 
-    Employee() {
-        // Default constructor
+    void area(int l, int b) {
+        System.out.print("Enter length : ");
+        l = s.nextInt();
+        System.out.print("\nEnter breadth : ");
+        b = s.nextInt();
+        System.out.print("\nArea of rectangle = " + l * b+"\n");
+
     }
 
-    Employee(int e_num, String e_name, int salary) {
-        this.e_num = e_num;
-        this.e_name = e_name;
-        this.salary = salary;
+    void area(int r) {
+        System.out.print("\nEnter radius : ");
+        r = s.nextInt();
+        System.out.print("\nArea of circle = " + 3.1 * r * r+"\n");
+
     }
 
-    void setDetails() {
-        System.out.print("\nEnter employee number: ");
-        e_num = sn.nextInt();
-        System.out.print("Enter employee name: ");
-        e_name = sn.next();
-        System.out.print("Enter employee salary: ");
-        salary = sn.nextInt();
-    }
-
-    void display() {
-        System.out.print("\nEmployee no: " + e_num + "\nEmployee name: " + e_name + "\nSalary: " + salary + "\n");
+    void area(double a) {
+        System.out.print("\nEnter side : ");
+        a = s.nextDouble();
+        System.out.print("\nArea of square = " + 3.1 * r * r+"\n");
 
     }
 }
 
-public class empDetails {
+public class shapes {
     public static void main(String args[]) {
-        int n,search;
-        int flag = 0;
-        Scanner sn = new Scanner(System.in);
-        
-        System.out.print("Employee count : ");
-        n=sn.nextInt();
-
-        Employee arr_obj[] = new Employee[n];
-
-        for (int i = 0; i < arr_obj.length; i++) {
-            System.out.println("\nEmployee " + (i + 1) + "\n_________________");
-
-            arr_obj[i] = new Employee();
-            arr_obj[i].setDetails();
-        }
-        for (int i = 0; i < arr_obj.length; i++) {
-            System.out.println("\nEmployee " + (i + 1) + "\n_________________");
-            arr_obj[i].display();
-
-        }
-        System.out.print("\nEnter employee number to search: ");
-        search = sn.nextInt();
-        for (int i = 0; i < arr_obj.length; i++) {
-            if (arr_obj[i].e_num == search) {
-                arr_obj[i].display();
-                flag = 1;
+        Scanner s = new Scanner(System.in);
+        int choice;
+        shape sh = new shape();
+	do{
+        System.out.print("1.Rectangale\n2.Circle\n3.Square\n4.Exit\nEnter choice : ");
+        choice = s.nextInt();
+        switch (choice) {
+            case 1:
+                sh.area(0, 0);
                 break;
-            }
+            case 2:
+                sh.area(0);
+                break;
+            case 3:
+                sh.area(0.0);
+	    case 4:
+		System.out.println("exiting.....");
+	        break;
+	    default:
+		System.out.println("error");
+	        
         }
-        if (flag == 0) {
-            System.out.print("Invalid employee number!!!!");
-        }
+}while(choice!=4);
+
     }
 }
