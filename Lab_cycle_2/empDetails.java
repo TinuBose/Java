@@ -1,58 +1,67 @@
 import java.util.Scanner;
 
-class shape {
-    int l, b, r, a;
-    Scanner s = new Scanner(System.in);
+class Employee {
+    Scanner sn = new Scanner(System.in);
+    int e_num;
+    String e_name;
+    int salary;
 
-    void area(int l, int b) {
-        System.out.print("Enter length : ");
-        l = s.nextInt();
-        System.out.print("\nEnter breadth : ");
-        b = s.nextInt();
-        System.out.print("\nArea of rectangle = " + l * b+"\n");
-
+    Employee() {
+        // Default constructor
     }
 
-    void area(int r) {
-        System.out.print("\nEnter radius : ");
-        r = s.nextInt();
-        System.out.print("\nArea of circle = " + 3.1 * r * r+"\n");
-
+    Employee(int e_num, String e_name, int salary) {
+        this.e_num = e_num;
+        this.e_name = e_name;
+        this.salary = salary;
     }
 
-    void area(double a) {
-        System.out.print("\nEnter side : ");
-        a = s.nextDouble();
-        System.out.print("\nArea of square = " + 3.1 * r * r+"\n");
+    void setDetails() {
+        System.out.print("\nEnter employee number: ");
+        e_num = sn.nextInt();
+        System.out.print("Enter employee name: ");
+        e_name = sn.next();
+        System.out.print("Enter employee salary: ");
+        salary = sn.nextInt();
+    }
+
+    void display() {
+        System.out.print("\nEmployee no: " + e_num + "\nEmployee name: " + e_name + "\nSalary:    "    + salary + "\n");
 
     }
 }
 
-public class shapes {
+public class empDetails {
     public static void main(String args[]) {
-        Scanner s = new Scanner(System.in);
-        int choice;
-        shape sh = new shape();
-	do{
-        System.out.print("1.Rectangale\n2.Circle\n3.Square\n4.Exit\nEnter choice : ");
-        choice = s.nextInt();
-        switch (choice) {
-            case 1:
-                sh.area(0, 0);
-                break;
-            case 2:
-                sh.area(0);
-                break;
-            case 3:
-                sh.area(0.0);
-	    case 4:
-		System.out.println("exiting.....");
-	        break;
-	    default:
-		System.out.println("error");
-	        
-        }
-}while(choice!=4);
+        int search;
+        int flag = 0;
+        Scanner sn = new Scanner(System.in);
 
+        Employee arr_obj[] = new Employee[3];
+
+        for (int i = 0; i < arr_obj.length; i++) {
+            System.out.println("\nEmployee " + (i + 1) + "\n_______");
+
+            arr_obj[i] = new Employee();
+            arr_obj[i].setDetails();
+        }
+        for (int i = 0; i < arr_obj.length; i++) {
+            System.out.println("\nEmployee " + (i + 1) + "\n_______");
+            arr_obj[i].display();
+
+        }
+        System.out.print("\nEnter employee number to search: ");
+        search = sn.nextInt();
+        for (int i = 0; i < arr_obj.length; i++) {
+            if (arr_obj[i].e_num == search) {
+                arr_obj[i].display();
+                System.out.println("\nValid");
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0) {
+            System.out.print("Invalid employee number!!!!");
+        }
     }
 }
