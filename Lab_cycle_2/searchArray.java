@@ -29,7 +29,7 @@ class setArr {
                 flag = 1;
             }
         }
-        if (flag == 1) {
+        if (flag == 0) {
             System.out.println("element not found...");
         }
     }
