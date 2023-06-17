@@ -33,26 +33,29 @@ class Employee {
 
 public class empDetails {
     public static void main(String args[]) {
+        int num;
         int search;
         int flag = 0;
         Scanner sn = new Scanner(System.in);
+        System.out.println("How much Employees : ");
+        num=sn.nextInt();
 
-        Employee arr_obj[] = new Employee[3];
+        Employee arr_obj[] = new Employee[num];
 
-        for (int i = 0; i < arr_obj.length; i++) {
+        for (int i = 0; i<num; i++) {
             System.out.println("\nEmployee " + (i + 1) + "\n_______");
 
             arr_obj[i] = new Employee();
             arr_obj[i].setDetails();
         }
-        for (int i = 0; i < arr_obj.length; i++) {
+        for (int i = 0; i < num; i++) {
             System.out.println("\nEmployee " + (i + 1) + "\n_______");
             arr_obj[i].display();
 
         }
         System.out.print("\nEnter employee number to search: ");
         search = sn.nextInt();
-        for (int i = 0; i < arr_obj.length; i++) {
+        for (int i = 0; i < num; i++) {
             if (arr_obj[i].e_num == search) {
                 arr_obj[i].display();
                 System.out.println("\nValid");
