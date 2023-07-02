@@ -24,11 +24,11 @@ class Result extends Sports{
         super(Sport_name, rating,name, grade, overall_percentage);
     }
     void show(){
-        System.out.print("\nName= "+name);
-        System.out.print("\nGrade= "+grade);
-        System.out.print("\nSports Name= "+Sport_name);
-        System.out.print("\nRating out of 10= "+rating);
-        System.out.print("\nOverall Percentage= "+overall_percentage);
+        System.out.print("\nName = "+name);
+        System.out.print("\nGrade = "+grade);
+        System.out.print("\nSports Name = "+Sport_name);
+        System.out.print("\nRating out of 10 = "+rating);
+        System.out.print("\nOverall Percentage = "+overall_percentage);
         
     }
 }
@@ -38,13 +38,13 @@ public class Score {
     public static void main(String args[]){
         Scanner sn=new Scanner(System.in);
 
-        System.out.print("Enter Student name= ");
+        System.out.print("Enter Student name = ");
         String name=sn.nextLine();
         System.out.print("\nEnter Grade = ");
         String grade=sn.nextLine();
-        System.out.print("\nEnter Sports name= ");
+        System.out.print("\nEnter Sports name = ");
         String sport_name=sn.nextLine();
-        System.out.print("\nEnter Rating = ");
+        System.out.print("\nEnter Rating out of 10 = ");
         int rating=sn.nextInt();
         System.out.print("\nEnter Overall Percentage = ");
         double overall_percentage=sn.nextDouble();
