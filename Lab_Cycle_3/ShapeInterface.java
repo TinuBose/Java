@@ -35,13 +35,38 @@ class Circle11 implements shapes_{
 
 public class ShapeInterface {
     public static void main(String args[]){
-        Rectangle11 re=new Rectangle11();
-        Circle11 ci=new Circle11();
-        System.out.println("\n\n----------Rectangle-----------\n");
-        re.area();
-        re.perimeter();
-        System.out.println("------------Circle-------------\n");
-        ci.area();
-        ci.perimeter();
+        Scanner sn=new Scanner(System.in);
+        int choice;
+        do{
+        System.out.print("\n1.Rectangle\n2.Circle\n3.Exit\nEnter choice : ");
+        choice=sn.nextInt();
+        switch(choice){
+            case 1: 
+                 Rectangle11 re=new Rectangle11();
+                 re.area();
+                 re.perimeter();
+                 break;
+            case 2:
+                 Circle11 ci=new Circle11();
+                 ci.area();
+                 ci.perimeter();
+                 break;
+            case 3:
+                 System.out.println("Exiting.....");
+                 break;
+            default:System.out.println("Enter a valid option");
+
+        }
+        }while(choice!=3);
+
+
+
+
+        // System.out.println("\n\n----------Rectangle-----------\n");
+        // re.area();
+        // re.perimeter();
+        // System.out.println("------------Circle-------------\n");
+        // ci.area();
+        // ci.perimeter();
     }
 }
