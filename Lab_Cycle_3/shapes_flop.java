@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class shapes {
+public class shapes_flop {
     
     void area(int r1){
         double Area_val = 3.14*r1*r1;
@@ -23,7 +23,7 @@ public class shapes {
         double a = sc.nextDouble();
         System.out.println("Enter the Radius");
         int r = sc.nextInt();
-        shapes obj1 = new shapes();
+        shapes_flop obj1 = new shapes_flop();
         obj1.area(r);
         obj1.area(l,b);
         obj1.area(a);
