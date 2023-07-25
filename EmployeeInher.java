@@ -22,23 +22,6 @@ class teacher extends employee {
         this.dept = dept;
         this.sub = sub;
     }
-
-    void setDetails() {
-        System.out.print("\nEnter employee ID : ");
-        emp_id = sn.nextInt();
-        System.out.print("Enter employee Name : ");
-        name = sn.next();
-        System.out.print("Enter employee Salary : ");
-        salary = sn.nextInt();
-        System.out.print("Enter employee Address : ");
-        address = sn.next();
-        System.out.print("Enter employee Deprtment : ");
-        dept = sn.next();
-        System.out.print("Enter employee Subject : ");
-        sub = sn.next();
-
-    }
-
     void display() {
         System.out.print("\nID : " + emp_id + "\nName : " + name + "\nDepartment : " + dept + "\nSub : " + sub
                 + "\nSalary : " + salary + "\nAddress : " + address + "\n");
