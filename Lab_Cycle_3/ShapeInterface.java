@@ -11,6 +11,7 @@ class Rectangle11 implements shapes_{
         l=sn.nextInt();
         b=sn.nextInt();
     }
+    @Override
     public void area(){
         System.out.print("Area of Rectangle : "+(l*b)+"\n");
     }
