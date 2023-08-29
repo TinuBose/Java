@@ -35,9 +35,9 @@ public class operations {
         } while (c != 0);
     }
 
-    private static int add(int a, int b) {
-        return a + b;
-    }
+    // private static int add(int a, int b) {
+    //     return a + b;
+    // }
 
     private static int subtract(int a, int b) {
         return a - b;
