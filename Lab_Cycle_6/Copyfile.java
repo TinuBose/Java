@@ -2,8 +2,8 @@ package Lab_Cycle_6;
 import java.io.*;
 public class Copyfile {
     public static void main(String[] args) {
-        String sourceFilePath = "C:\\Users\\HP\\Desktop\\source.txt"; // Replace with your source file path
-        String destinationFilePath = "destination.txt"; // Replace with your destination file path
+        String sourceFilePath = "C:\\Users\\HP\\Desktop\\source.txt";
+        String destinationFilePath = "destination.txt"; 
         
         try (FileInputStream sourceFileInputStream = new FileInputStream(sourceFilePath);
              FileOutputStream destinationFileOutputStream = new FileOutputStream(destinationFilePath)) {
